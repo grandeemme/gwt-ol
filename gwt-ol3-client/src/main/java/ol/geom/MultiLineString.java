@@ -26,9 +26,9 @@ import ol.Coordinate;
 @JsType(isNative = true)
 public class MultiLineString extends SimpleGeometryMultiCoordinates {
 
-    public MultiLineString(Coordinate[] coordinates) {}
+    public MultiLineString(Coordinate[][] coordinates) {}
 
-    public MultiLineString(Coordinate[] coordinates, String geometryLayout) {}
+    public MultiLineString(Coordinate[][] coordinates, String geometryLayout) {}
 
     /**
      * Append the passed linestring to the multilinestring.
