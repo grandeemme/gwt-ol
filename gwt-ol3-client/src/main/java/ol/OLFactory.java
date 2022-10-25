@@ -639,7 +639,7 @@ public final class OLFactory {
      *            coordinates
      * @return {@link MultiLineString}
      */
-    public static MultiLineString createMultiLineString(Coordinate[] coordinates) {
+    public static MultiLineString createMultiLineString(Coordinate[][] coordinates) {
         return new MultiLineString(coordinates);
     };
 
@@ -652,7 +652,7 @@ public final class OLFactory {
      *            geometry layout
      * @return {@link MultiLineString}
      */
-    public static MultiLineString createMultiLineString(@Nullable Coordinate[] coordinates,
+    public static MultiLineString createMultiLineString(@Nullable Coordinate[][] coordinates,
         @Nullable String geometryLayout) {
         return new MultiLineString(coordinates, geometryLayout);
     };
@@ -689,7 +689,7 @@ public final class OLFactory {
      *            coordinates
      * @return {@link MultiPolygon}
      */
-    public static MultiPolygon createMultiPolygon(Coordinate[] coordinates) {
+    public static MultiPolygon createMultiPolygon(Coordinate[][][] coordinates) {
         return new MultiPolygon(coordinates);
     };
 
@@ -702,7 +702,7 @@ public final class OLFactory {
      *            geometry layout
      * @return {@link MultiPolygon}
      */
-    public static MultiPolygon createMultiPolygon(@Nullable Coordinate[] coordinates,
+    public static MultiPolygon createMultiPolygon(@Nullable Coordinate[][][] coordinates,
         @Nullable String geometryLayout) {
         return new MultiPolygon(coordinates, geometryLayout);
     };
