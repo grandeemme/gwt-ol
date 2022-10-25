@@ -66,4 +66,7 @@ public class ViewOptions implements Options {
 
     @JsProperty
     public native void setZoomFactor(double zoomFactor);
+    
+    @JsProperty
+    public native void setConstrainResolution(boolean constrainResolution);
 }
