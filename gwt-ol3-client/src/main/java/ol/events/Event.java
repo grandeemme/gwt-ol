@@ -75,4 +75,10 @@ public interface Event {
      * Stops event propagation.
      */
     void stopPropagation();
+    
+    @JsProperty
+    int getClientX();
+	
+    @JsProperty
+    int getClientY();
 }
