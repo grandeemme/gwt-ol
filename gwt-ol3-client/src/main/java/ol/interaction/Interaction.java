@@ -43,7 +43,10 @@ public abstract class Interaction extends ol.Object {
     @JsOverlay
     private static final String PACKAGE_INTERACTION = "ol.interaction";
 
-    @JsMethod(name = "defaults", namespace = PACKAGE_INTERACTION)
+    @JsOverlay
+    private static final String PACKAGE_INTERACTION_DEFAULTS = "ol.interaction.defaults";
+
+    @JsMethod(name = "defaults", namespace = PACKAGE_INTERACTION_DEFAULTS)
     public static native ol.Collection<ol.interaction.Interaction> defaults();
 
     /**
@@ -59,7 +62,7 @@ public abstract class Interaction extends ol.Object {
      *            options.
      * @return interactions
      */
-    @JsMethod(name = "defaults", namespace = PACKAGE_INTERACTION)
+    @JsMethod(name = "defaults", namespace = PACKAGE_INTERACTION_DEFAULTS)
     public static native ol.Collection<ol.interaction.Interaction> defaults(DefaultInteractionsOptions options);
 
     /**
