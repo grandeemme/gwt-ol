@@ -81,7 +81,7 @@ public class Feature extends Object {
      * @return {ol.geom.Geometry|undefined} The default geometry for the
      *         feature.
      */
-    public native Geometry getGeometry();
+    public native <G extends Geometry> G getGeometry();
 
     /**
      * Get the name of the feature's default geometry. By default, the default
