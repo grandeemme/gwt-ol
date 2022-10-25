@@ -89,6 +89,17 @@ public abstract class Object extends Observable {
     public native <T> void set(String key, T value);
 
     /**
+     * Sets a value.
+     *
+     * 
+     * @param <T>
+     * @param key    Key name.
+     * @param value  Value.
+     * @param silent Update without triggering an event.
+     */
+    public native <T> void set(String key, T value, boolean silent);
+
+    /**
      * Sets a collection of key-value pairs. Note that this changes any existing properties
      * and adds new ones (it does not remove any existing properties).
      *
