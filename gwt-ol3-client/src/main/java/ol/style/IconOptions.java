@@ -15,6 +15,7 @@
  *******************************************************************************/
 package ol.style;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,6 +31,12 @@ import ol.color.Color;
  */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
 public class IconOptions implements Options {
+
+    @JsOverlay
+    public static final String FRACTION = "fraction";
+
+    @JsOverlay
+    public static final String PIXELS = "pixels";
 
     /**
      * @param color Color to tint the icon. If not specified, the icon will be left as is.
@@ -76,7 +83,6 @@ public class IconOptions implements Options {
     @JsProperty
     public native void setSize(Size size);
 
-
     /**
      * @param imageUri Image source URI
      */
@@ -88,5 +94,11 @@ public class IconOptions implements Options {
      */
     @JsProperty
     public native void setAnchor(double[] anchor);
+
+    @JsProperty
+    public native void setAnchorXUnits(String units);
+
+    @JsProperty
+    public native void setAnchorYUnits(String units);
 
 }
