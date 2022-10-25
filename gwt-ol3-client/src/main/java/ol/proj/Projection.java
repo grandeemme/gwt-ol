@@ -75,24 +75,27 @@ public class Projection {
      * @return meters.
      */
     public native double getMetersPerUnit();
-
+    
     /**
-     * Get the resolution of the point in degrees or distance units. For
-     * projections with degrees as the unit this will simply return the provided
-     * resolution. The default for other projections is to estimate the point
-     * resolution by transforming the 'point' pixel to EPSG:4326, measuring its
-     * width and height on the normal sphere, and taking the average of the
-     * width and height. An alternative implementation may be given when
-     * constructing a projection. For many local projections, such a custom
-     * function will return the resolution unchanged.
-     *
-     * @param resolution
-     *            Resolution in projection units.
-     * @param point
-     *            Point.
-     * @return {number} Point resolution in projection units.
+     * Get the resolution of the point in degrees or distance units. For projections
+     * with degrees as the unit this will simply return the provided resolution. The
+     * default for other projections is to estimate the point resolution by
+     * transforming the 'point' pixel to EPSG:4326, measuring its width and height
+     * on the normal sphere, and taking the average of the width and height. An
+     * alternative implementation may be given when constructing a projection. For
+     * many local projections, such a custom function will return the resolution
+     * unchanged.
+     * 
+     * @param projection The projection.
+     * @param resolution Resolution in projection units.
+     * @param point      Point to find adjusted resolution at.
+     * @param unit       Units to get the point resolution in. Default is the
+     *                   projection's units.
+     * @return Point resolution.
      */
-    public native double getPointResolution(double resolution, ol.Coordinate point);
+    @JsMethod(name = "getPointResolution", namespace = PACKAGE_PROJECTION)
+    public native static double getPointResolution(Projection projection, double resolution, ol.Coordinate point,
+            String unit);
 
     /**
      * Get the units of this projection.
@@ -171,7 +174,6 @@ public class Projection {
      */
     @JsMethod(name = "equivalent", namespace = PACKAGE_PROJECTION)
     public static native boolean equivalent(ol.proj.Projection projection1, ol.proj.Projection projection2);
-
 
     /**
      *
