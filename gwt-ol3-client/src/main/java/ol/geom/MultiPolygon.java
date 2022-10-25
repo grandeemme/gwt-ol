@@ -28,9 +28,9 @@ import ol.Coordinate;
 @JsType(isNative = true)
 public class MultiPolygon extends SimpleGeometry {
 
-    public MultiPolygon(Coordinate[] coordinates) {}
+    public MultiPolygon(Coordinate[][][] coordinates) {}
 
-    public MultiPolygon(Coordinate[] coordinates, @Nullable String geometryLayout) {}
+    public MultiPolygon(Coordinate[][][] coordinates, @Nullable String geometryLayout) {}
 
     /**
      * Return the coordinates of this geometry.
