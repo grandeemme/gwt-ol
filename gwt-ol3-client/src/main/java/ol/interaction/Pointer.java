@@ -30,7 +30,11 @@ import jsinterop.annotations.JsType;
  *
  */
 @JsType(isNative = true)
-public abstract class Pointer extends Interaction {
+public class Pointer extends Interaction {
+
+    public Pointer() {}
+
+    public Pointer(PointerOptions pointerOptions) {}
 
     /**
      * @return the current number of pointers involved in the interaction, e.g. 2 when two fingers are used.
